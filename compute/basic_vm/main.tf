@@ -26,6 +26,7 @@ resource "google_service_account" "default" {
 }
 
 resource "google_compute_instance" "default" {
+  project      = "composed-slice-422218-v9"
   name         = "my-instance"
   machine_type = "n2-standard-2"
   zone         = "us-east1-a"
