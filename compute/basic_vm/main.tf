@@ -43,10 +43,11 @@ resource "google_compute_subnetwork" "custom" {
 
 resource "google_service_account" "default" {
   account_id   = "terraform-sa"
-  display_name = "Custom SA for VM Instance"
+  display_name = "Terraform SA for VM Instance"
 }
 
 resource "google_compute_instance" "default" {
+  project      = "composed-slice-422218-v9"
   name         = "my-vm-instance"
   tags         = ["allow-ssh"]
   zone         = "us-east1-b"
